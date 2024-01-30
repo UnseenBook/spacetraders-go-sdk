@@ -24,24 +24,24 @@ Get Public Agent
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    agentSymbol := "agentSymbol_example" // string | The agent symbol (default to "FEBA66")
+	agentSymbol := "agentSymbol_example" // string | The agent symbol (default to "FEBA66")
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.AgentsAPI.GetAgent(context.Background(), agentSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `AgentsAPI.GetAgent``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetAgent`: GetMyAgent200Response
-    fmt.Fprintf(os.Stdout, "Response from `AgentsAPI.GetAgent`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AgentsAPI.GetAgent(context.Background(), agentSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AgentsAPI.GetAgent``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetAgent`: GetMyAgent200Response
+	fmt.Fprintf(os.Stdout, "Response from `AgentsAPI.GetAgent`: %v\n", resp)
 }
 ```
 
@@ -94,25 +94,25 @@ List Agents
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
-    limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
+	page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
+	limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.AgentsAPI.GetAgents(context.Background()).Page(page).Limit(limit).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `AgentsAPI.GetAgents``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetAgents`: GetAgents200Response
-    fmt.Fprintf(os.Stdout, "Response from `AgentsAPI.GetAgents`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AgentsAPI.GetAgents(context.Background()).Page(page).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AgentsAPI.GetAgents``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetAgents`: GetAgents200Response
+	fmt.Fprintf(os.Stdout, "Response from `AgentsAPI.GetAgents`: %v\n", resp)
 }
 ```
 
@@ -162,23 +162,23 @@ Get Agent
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.AgentsAPI.GetMyAgent(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `AgentsAPI.GetMyAgent``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMyAgent`: GetMyAgent200Response
-    fmt.Fprintf(os.Stdout, "Response from `AgentsAPI.GetMyAgent`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.AgentsAPI.GetMyAgent(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `AgentsAPI.GetMyAgent``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMyAgent`: GetMyAgent200Response
+	fmt.Fprintf(os.Stdout, "Response from `AgentsAPI.GetMyAgent`: %v\n", resp)
 }
 ```
 

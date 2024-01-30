@@ -173,8 +173,8 @@ func (o GetStatus200ResponseStats) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *GetStatus200ResponseStats) UnmarshalJSON(bytes []byte) (err error) {
-    // This validates that all required properties are included in the JSON object
+func (o *GetStatus200ResponseStats) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
@@ -186,7 +186,7 @@ func (o *GetStatus200ResponseStats) UnmarshalJSON(bytes []byte) (err error) {
 
 	allProperties := make(map[string]interface{})
 
-	err = json.Unmarshal(bytes, &allProperties)
+	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
 		return err;
@@ -200,7 +200,7 @@ func (o *GetStatus200ResponseStats) UnmarshalJSON(bytes []byte) (err error) {
 
 	varGetStatus200ResponseStats := _GetStatus200ResponseStats{}
 
-	err = json.Unmarshal(bytes, &varGetStatus200ResponseStats)
+	err = json.Unmarshal(data, &varGetStatus200ResponseStats)
 
 	if err != nil {
 		return err
@@ -210,7 +210,7 @@ func (o *GetStatus200ResponseStats) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "agents")
 		delete(additionalProperties, "ships")
 		delete(additionalProperties, "systems")

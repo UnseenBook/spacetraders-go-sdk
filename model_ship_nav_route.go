@@ -172,8 +172,8 @@ func (o ShipNavRoute) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *ShipNavRoute) UnmarshalJSON(bytes []byte) (err error) {
-    // This validates that all required properties are included in the JSON object
+func (o *ShipNavRoute) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
@@ -185,7 +185,7 @@ func (o *ShipNavRoute) UnmarshalJSON(bytes []byte) (err error) {
 
 	allProperties := make(map[string]interface{})
 
-	err = json.Unmarshal(bytes, &allProperties)
+	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
 		return err;
@@ -199,7 +199,7 @@ func (o *ShipNavRoute) UnmarshalJSON(bytes []byte) (err error) {
 
 	varShipNavRoute := _ShipNavRoute{}
 
-	err = json.Unmarshal(bytes, &varShipNavRoute)
+	err = json.Unmarshal(data, &varShipNavRoute)
 
 	if err != nil {
 		return err
@@ -209,7 +209,7 @@ func (o *ShipNavRoute) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "destination")
 		delete(additionalProperties, "origin")
 		delete(additionalProperties, "departureTime")

@@ -117,8 +117,8 @@ func (o ShipRefine201ResponseDataProducedInner) ToMap() (map[string]interface{},
 	return toSerialize, nil
 }
 
-func (o *ShipRefine201ResponseDataProducedInner) UnmarshalJSON(bytes []byte) (err error) {
-    // This validates that all required properties are included in the JSON object
+func (o *ShipRefine201ResponseDataProducedInner) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
@@ -128,7 +128,7 @@ func (o *ShipRefine201ResponseDataProducedInner) UnmarshalJSON(bytes []byte) (er
 
 	allProperties := make(map[string]interface{})
 
-	err = json.Unmarshal(bytes, &allProperties)
+	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
 		return err;
@@ -142,7 +142,7 @@ func (o *ShipRefine201ResponseDataProducedInner) UnmarshalJSON(bytes []byte) (er
 
 	varShipRefine201ResponseDataProducedInner := _ShipRefine201ResponseDataProducedInner{}
 
-	err = json.Unmarshal(bytes, &varShipRefine201ResponseDataProducedInner)
+	err = json.Unmarshal(data, &varShipRefine201ResponseDataProducedInner)
 
 	if err != nil {
 		return err
@@ -152,7 +152,7 @@ func (o *ShipRefine201ResponseDataProducedInner) UnmarshalJSON(bytes []byte) (er
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "tradeSymbol")
 		delete(additionalProperties, "units")
 		o.AdditionalProperties = additionalProperties

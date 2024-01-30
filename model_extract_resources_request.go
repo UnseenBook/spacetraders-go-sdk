@@ -96,10 +96,10 @@ func (o ExtractResourcesRequest) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *ExtractResourcesRequest) UnmarshalJSON(bytes []byte) (err error) {
+func (o *ExtractResourcesRequest) UnmarshalJSON(data []byte) (err error) {
 	varExtractResourcesRequest := _ExtractResourcesRequest{}
 
-	err = json.Unmarshal(bytes, &varExtractResourcesRequest)
+	err = json.Unmarshal(data, &varExtractResourcesRequest)
 
 	if err != nil {
 		return err
@@ -109,7 +109,7 @@ func (o *ExtractResourcesRequest) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "survey")
 		o.AdditionalProperties = additionalProperties
 	}

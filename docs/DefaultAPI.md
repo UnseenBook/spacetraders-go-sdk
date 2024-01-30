@@ -23,23 +23,23 @@ Get Status
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultAPI.GetStatus(context.Background()).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.GetStatus``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetStatus`: GetStatus200Response
-    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.GetStatus`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.GetStatus(context.Background()).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.GetStatus``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetStatus`: GetStatus200Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.GetStatus`: %v\n", resp)
 }
 ```
 
@@ -84,24 +84,24 @@ Register New Agent
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    registerRequest := *openapiclient.NewRegisterRequest(openapiclient.FactionSymbol("COSMIC"), "BADGER") // RegisterRequest |  (optional)
+	registerRequest := *openapiclient.NewRegisterRequest(openapiclient.FactionSymbol("COSMIC"), "BADGER") // RegisterRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.DefaultAPI.Register(context.Background()).RegisterRequest(registerRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.Register``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `Register`: Register201Response
-    fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.Register`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.DefaultAPI.Register(context.Background()).RegisterRequest(registerRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `DefaultAPI.Register``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `Register`: Register201Response
+	fmt.Fprintf(os.Stdout, "Response from `DefaultAPI.Register`: %v\n", resp)
 }
 ```
 

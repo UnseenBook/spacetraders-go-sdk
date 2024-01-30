@@ -430,8 +430,8 @@ func (o Waypoint) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *Waypoint) UnmarshalJSON(bytes []byte) (err error) {
-    // This validates that all required properties are included in the JSON object
+func (o *Waypoint) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
@@ -447,7 +447,7 @@ func (o *Waypoint) UnmarshalJSON(bytes []byte) (err error) {
 
 	allProperties := make(map[string]interface{})
 
-	err = json.Unmarshal(bytes, &allProperties)
+	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
 		return err;
@@ -461,7 +461,7 @@ func (o *Waypoint) UnmarshalJSON(bytes []byte) (err error) {
 
 	varWaypoint := _Waypoint{}
 
-	err = json.Unmarshal(bytes, &varWaypoint)
+	err = json.Unmarshal(data, &varWaypoint)
 
 	if err != nil {
 		return err
@@ -471,7 +471,7 @@ func (o *Waypoint) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "symbol")
 		delete(additionalProperties, "type")
 		delete(additionalProperties, "systemSymbol")

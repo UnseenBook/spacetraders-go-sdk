@@ -134,10 +134,10 @@ func (o RefuelShipRequest) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *RefuelShipRequest) UnmarshalJSON(bytes []byte) (err error) {
+func (o *RefuelShipRequest) UnmarshalJSON(data []byte) (err error) {
 	varRefuelShipRequest := _RefuelShipRequest{}
 
-	err = json.Unmarshal(bytes, &varRefuelShipRequest)
+	err = json.Unmarshal(data, &varRefuelShipRequest)
 
 	if err != nil {
 		return err
@@ -147,7 +147,7 @@ func (o *RefuelShipRequest) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "units")
 		delete(additionalProperties, "fromCargo")
 		o.AdditionalProperties = additionalProperties

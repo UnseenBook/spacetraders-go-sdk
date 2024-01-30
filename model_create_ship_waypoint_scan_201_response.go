@@ -88,8 +88,8 @@ func (o CreateShipWaypointScan201Response) ToMap() (map[string]interface{}, erro
 	return toSerialize, nil
 }
 
-func (o *CreateShipWaypointScan201Response) UnmarshalJSON(bytes []byte) (err error) {
-    // This validates that all required properties are included in the JSON object
+func (o *CreateShipWaypointScan201Response) UnmarshalJSON(data []byte) (err error) {
+	// This validates that all required properties are included in the JSON object
 	// by unmarshalling the object into a generic map with string keys and checking
 	// that every required field exists as a key in the generic map.
 	requiredProperties := []string{
@@ -98,7 +98,7 @@ func (o *CreateShipWaypointScan201Response) UnmarshalJSON(bytes []byte) (err err
 
 	allProperties := make(map[string]interface{})
 
-	err = json.Unmarshal(bytes, &allProperties)
+	err = json.Unmarshal(data, &allProperties)
 
 	if err != nil {
 		return err;
@@ -112,7 +112,7 @@ func (o *CreateShipWaypointScan201Response) UnmarshalJSON(bytes []byte) (err err
 
 	varCreateShipWaypointScan201Response := _CreateShipWaypointScan201Response{}
 
-	err = json.Unmarshal(bytes, &varCreateShipWaypointScan201Response)
+	err = json.Unmarshal(data, &varCreateShipWaypointScan201Response)
 
 	if err != nil {
 		return err
@@ -122,7 +122,7 @@ func (o *CreateShipWaypointScan201Response) UnmarshalJSON(bytes []byte) (err err
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "data")
 		o.AdditionalProperties = additionalProperties
 	}

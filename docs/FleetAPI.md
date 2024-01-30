@@ -51,24 +51,24 @@ Create Chart
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.CreateChart(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateChart``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CreateChart`: CreateChart201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateChart`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.CreateChart(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateChart``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateChart`: CreateChart201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateChart`: %v\n", resp)
 }
 ```
 
@@ -121,24 +121,24 @@ Scan Ships
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.CreateShipShipScan(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateShipShipScan``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CreateShipShipScan`: CreateShipShipScan201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateShipShipScan`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.CreateShipShipScan(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateShipShipScan``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateShipShipScan`: CreateShipShipScan201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateShipShipScan`: %v\n", resp)
 }
 ```
 
@@ -191,24 +191,24 @@ Scan Systems
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.CreateShipSystemScan(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateShipSystemScan``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CreateShipSystemScan`: CreateShipSystemScan201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateShipSystemScan`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.CreateShipSystemScan(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateShipSystemScan``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateShipSystemScan`: CreateShipSystemScan201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateShipSystemScan`: %v\n", resp)
 }
 ```
 
@@ -261,24 +261,24 @@ Scan Waypoints
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.CreateShipWaypointScan(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateShipWaypointScan``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CreateShipWaypointScan`: CreateShipWaypointScan201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateShipWaypointScan`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.CreateShipWaypointScan(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateShipWaypointScan``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateShipWaypointScan`: CreateShipWaypointScan201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateShipWaypointScan`: %v\n", resp)
 }
 ```
 
@@ -331,24 +331,24 @@ Create Survey
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.CreateSurvey(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateSurvey``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `CreateSurvey`: CreateSurvey201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateSurvey`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.CreateSurvey(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.CreateSurvey``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `CreateSurvey`: CreateSurvey201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.CreateSurvey`: %v\n", resp)
 }
 ```
 
@@ -401,24 +401,24 @@ Dock Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.DockShip(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.DockShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DockShip`: DockShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.DockShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.DockShip(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.DockShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DockShip`: DockShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.DockShip`: %v\n", resp)
 }
 ```
 
@@ -471,25 +471,25 @@ Extract Resources
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    extractResourcesRequest := *openapiclient.NewExtractResourcesRequest() // ExtractResourcesRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	extractResourcesRequest := *openapiclient.NewExtractResourcesRequest() // ExtractResourcesRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.ExtractResources(context.Background(), shipSymbol).ExtractResourcesRequest(extractResourcesRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.ExtractResources``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ExtractResources`: ExtractResources201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.ExtractResources`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.ExtractResources(context.Background(), shipSymbol).ExtractResourcesRequest(extractResourcesRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.ExtractResources``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ExtractResources`: ExtractResources201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.ExtractResources`: %v\n", resp)
 }
 ```
 
@@ -543,26 +543,26 @@ Extract Resources with Survey
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
+	"context"
+	"fmt"
+	"os"
     "time"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    survey := *openapiclient.NewSurvey("Signature_example", "Symbol_example", []openapiclient.SurveyDeposit{*openapiclient.NewSurveyDeposit("Symbol_example")}, time.Now(), "Size_example") // Survey |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	survey := *openapiclient.NewSurvey("Signature_example", "Symbol_example", []openapiclient.SurveyDeposit{*openapiclient.NewSurveyDeposit("Symbol_example")}, time.Now(), "Size_example") // Survey |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.ExtractResourcesWithSurvey(context.Background(), shipSymbol).Survey(survey).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.ExtractResourcesWithSurvey``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ExtractResourcesWithSurvey`: ExtractResources201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.ExtractResourcesWithSurvey`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.ExtractResourcesWithSurvey(context.Background(), shipSymbol).Survey(survey).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.ExtractResourcesWithSurvey``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ExtractResourcesWithSurvey`: ExtractResources201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.ExtractResourcesWithSurvey`: %v\n", resp)
 }
 ```
 
@@ -616,24 +616,24 @@ Get Mounts
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship's symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship's symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.GetMounts(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMounts``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMounts`: GetMounts200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMounts`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.GetMounts(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMounts``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMounts`: GetMounts200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMounts`: %v\n", resp)
 }
 ```
 
@@ -686,24 +686,24 @@ Get Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.GetMyShip(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMyShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMyShip`: GetMyShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMyShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.GetMyShip(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMyShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMyShip`: GetMyShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMyShip`: %v\n", resp)
 }
 ```
 
@@ -756,24 +756,24 @@ Get Ship Cargo
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.GetMyShipCargo(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMyShipCargo``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMyShipCargo`: GetMyShipCargo200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMyShipCargo`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.GetMyShipCargo(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMyShipCargo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMyShipCargo`: GetMyShipCargo200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMyShipCargo`: %v\n", resp)
 }
 ```
 
@@ -826,25 +826,25 @@ List Ships
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
-    limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
+	page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
+	limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.GetMyShips(context.Background()).Page(page).Limit(limit).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMyShips``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetMyShips`: GetMyShips200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMyShips`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.GetMyShips(context.Background()).Page(page).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetMyShips``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetMyShips`: GetMyShips200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetMyShips`: %v\n", resp)
 }
 ```
 
@@ -894,24 +894,24 @@ Get Ship Cooldown
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.GetShipCooldown(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetShipCooldown``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetShipCooldown`: GetShipCooldown200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetShipCooldown`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.GetShipCooldown(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetShipCooldown``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetShipCooldown`: GetShipCooldown200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetShipCooldown`: %v\n", resp)
 }
 ```
 
@@ -964,24 +964,24 @@ Get Ship Nav
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.GetShipNav(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetShipNav``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetShipNav`: GetShipNav200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetShipNav`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.GetShipNav(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.GetShipNav``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetShipNav`: GetShipNav200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.GetShipNav`: %v\n", resp)
 }
 ```
 
@@ -1034,25 +1034,25 @@ Install Mount
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship's symbol.
-    installMountRequest := *openapiclient.NewInstallMountRequest("Symbol_example") // InstallMountRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship's symbol.
+	installMountRequest := *openapiclient.NewInstallMountRequest("Symbol_example") // InstallMountRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.InstallMount(context.Background(), shipSymbol).InstallMountRequest(installMountRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.InstallMount``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `InstallMount`: InstallMount201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.InstallMount`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.InstallMount(context.Background(), shipSymbol).InstallMountRequest(installMountRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.InstallMount``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `InstallMount`: InstallMount201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.InstallMount`: %v\n", resp)
 }
 ```
 
@@ -1106,25 +1106,25 @@ Jettison Cargo
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    jettisonRequest := *openapiclient.NewJettisonRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123)) // JettisonRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	jettisonRequest := *openapiclient.NewJettisonRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123)) // JettisonRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.Jettison(context.Background(), shipSymbol).JettisonRequest(jettisonRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.Jettison``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `Jettison`: Jettison200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.Jettison`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.Jettison(context.Background(), shipSymbol).JettisonRequest(jettisonRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.Jettison``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `Jettison`: Jettison200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.Jettison`: %v\n", resp)
 }
 ```
 
@@ -1178,25 +1178,25 @@ Jump Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    jumpShipRequest := *openapiclient.NewJumpShipRequest("WaypointSymbol_example") // JumpShipRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	jumpShipRequest := *openapiclient.NewJumpShipRequest("WaypointSymbol_example") // JumpShipRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.JumpShip(context.Background(), shipSymbol).JumpShipRequest(jumpShipRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.JumpShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `JumpShip`: JumpShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.JumpShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.JumpShip(context.Background(), shipSymbol).JumpShipRequest(jumpShipRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.JumpShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `JumpShip`: JumpShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.JumpShip`: %v\n", resp)
 }
 ```
 
@@ -1250,25 +1250,25 @@ Navigate Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    navigateShipRequest := *openapiclient.NewNavigateShipRequest("WaypointSymbol_example") // NavigateShipRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	navigateShipRequest := *openapiclient.NewNavigateShipRequest("WaypointSymbol_example") // NavigateShipRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.NavigateShip(context.Background(), shipSymbol).NavigateShipRequest(navigateShipRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.NavigateShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `NavigateShip`: NavigateShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.NavigateShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.NavigateShip(context.Background(), shipSymbol).NavigateShipRequest(navigateShipRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.NavigateShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `NavigateShip`: NavigateShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.NavigateShip`: %v\n", resp)
 }
 ```
 
@@ -1322,24 +1322,24 @@ Negotiate Contract
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship's symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship's symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.NegotiateContract(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.NegotiateContract``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `NegotiateContract`: NegotiateContract200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.NegotiateContract`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.NegotiateContract(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.NegotiateContract``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `NegotiateContract`: NegotiateContract200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.NegotiateContract`: %v\n", resp)
 }
 ```
 
@@ -1392,24 +1392,24 @@ Orbit Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.OrbitShip(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.OrbitShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `OrbitShip`: OrbitShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.OrbitShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.OrbitShip(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.OrbitShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `OrbitShip`: OrbitShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.OrbitShip`: %v\n", resp)
 }
 ```
 
@@ -1462,25 +1462,25 @@ Patch Ship Nav
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    patchShipNavRequest := *openapiclient.NewPatchShipNavRequest() // PatchShipNavRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	patchShipNavRequest := *openapiclient.NewPatchShipNavRequest() // PatchShipNavRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.PatchShipNav(context.Background(), shipSymbol).PatchShipNavRequest(patchShipNavRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.PatchShipNav``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `PatchShipNav`: GetShipNav200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.PatchShipNav`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.PatchShipNav(context.Background(), shipSymbol).PatchShipNavRequest(patchShipNavRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.PatchShipNav``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `PatchShipNav`: GetShipNav200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.PatchShipNav`: %v\n", resp)
 }
 ```
 
@@ -1534,25 +1534,25 @@ Purchase Cargo
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship's symbol.
-    purchaseCargoRequest := *openapiclient.NewPurchaseCargoRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123)) // PurchaseCargoRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship's symbol.
+	purchaseCargoRequest := *openapiclient.NewPurchaseCargoRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123)) // PurchaseCargoRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.PurchaseCargo(context.Background(), shipSymbol).PurchaseCargoRequest(purchaseCargoRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.PurchaseCargo``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `PurchaseCargo`: PurchaseCargo201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.PurchaseCargo`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.PurchaseCargo(context.Background(), shipSymbol).PurchaseCargoRequest(purchaseCargoRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.PurchaseCargo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `PurchaseCargo`: PurchaseCargo201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.PurchaseCargo`: %v\n", resp)
 }
 ```
 
@@ -1606,24 +1606,24 @@ Purchase Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    purchaseShipRequest := *openapiclient.NewPurchaseShipRequest(openapiclient.ShipType("SHIP_PROBE"), "WaypointSymbol_example") // PurchaseShipRequest |  (optional)
+	purchaseShipRequest := *openapiclient.NewPurchaseShipRequest(openapiclient.ShipType("SHIP_PROBE"), "WaypointSymbol_example") // PurchaseShipRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.PurchaseShip(context.Background()).PurchaseShipRequest(purchaseShipRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.PurchaseShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `PurchaseShip`: PurchaseShip201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.PurchaseShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.PurchaseShip(context.Background()).PurchaseShipRequest(purchaseShipRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.PurchaseShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `PurchaseShip`: PurchaseShip201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.PurchaseShip`: %v\n", resp)
 }
 ```
 
@@ -1672,25 +1672,25 @@ Refuel Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    refuelShipRequest := *openapiclient.NewRefuelShipRequest() // RefuelShipRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	refuelShipRequest := *openapiclient.NewRefuelShipRequest() // RefuelShipRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.RefuelShip(context.Background(), shipSymbol).RefuelShipRequest(refuelShipRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.RefuelShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RefuelShip`: RefuelShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.RefuelShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.RefuelShip(context.Background(), shipSymbol).RefuelShipRequest(refuelShipRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.RefuelShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RefuelShip`: RefuelShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.RefuelShip`: %v\n", resp)
 }
 ```
 
@@ -1744,25 +1744,25 @@ Remove Mount
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship's symbol.
-    removeMountRequest := *openapiclient.NewRemoveMountRequest("Symbol_example") // RemoveMountRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship's symbol.
+	removeMountRequest := *openapiclient.NewRemoveMountRequest("Symbol_example") // RemoveMountRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.RemoveMount(context.Background(), shipSymbol).RemoveMountRequest(removeMountRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.RemoveMount``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `RemoveMount`: RemoveMount201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.RemoveMount`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.RemoveMount(context.Background(), shipSymbol).RemoveMountRequest(removeMountRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.RemoveMount``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `RemoveMount`: RemoveMount201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.RemoveMount`: %v\n", resp)
 }
 ```
 
@@ -1816,25 +1816,25 @@ Sell Cargo
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | Symbol of a ship.
-    sellCargoRequest := *openapiclient.NewSellCargoRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123)) // SellCargoRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | Symbol of a ship.
+	sellCargoRequest := *openapiclient.NewSellCargoRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123)) // SellCargoRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.SellCargo(context.Background(), shipSymbol).SellCargoRequest(sellCargoRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.SellCargo``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SellCargo`: SellCargo201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.SellCargo`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.SellCargo(context.Background(), shipSymbol).SellCargoRequest(sellCargoRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.SellCargo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SellCargo`: SellCargo201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.SellCargo`: %v\n", resp)
 }
 ```
 
@@ -1888,25 +1888,25 @@ Ship Refine
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
-    shipRefineRequest := *openapiclient.NewShipRefineRequest("Produce_example") // ShipRefineRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The symbol of the ship.
+	shipRefineRequest := *openapiclient.NewShipRefineRequest("Produce_example") // ShipRefineRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.ShipRefine(context.Background(), shipSymbol).ShipRefineRequest(shipRefineRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.ShipRefine``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `ShipRefine`: ShipRefine201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.ShipRefine`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.ShipRefine(context.Background(), shipSymbol).ShipRefineRequest(shipRefineRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.ShipRefine``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `ShipRefine`: ShipRefine201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.ShipRefine`: %v\n", resp)
 }
 ```
 
@@ -1960,24 +1960,24 @@ Siphon Resources
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.SiphonResources(context.Background(), shipSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.SiphonResources``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `SiphonResources`: SiphonResources201Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.SiphonResources`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.SiphonResources(context.Background(), shipSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.SiphonResources``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `SiphonResources`: SiphonResources201Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.SiphonResources`: %v\n", resp)
 }
 ```
 
@@ -2030,25 +2030,25 @@ Transfer Cargo
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The transferring ship's symbol.
-    transferCargoRequest := *openapiclient.NewTransferCargoRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123), "ShipSymbol_example") // TransferCargoRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The transferring ship's symbol.
+	transferCargoRequest := *openapiclient.NewTransferCargoRequest(openapiclient.TradeSymbol("PRECIOUS_STONES"), int32(123), "ShipSymbol_example") // TransferCargoRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.TransferCargo(context.Background(), shipSymbol).TransferCargoRequest(transferCargoRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.TransferCargo``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `TransferCargo`: TransferCargo200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.TransferCargo`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.TransferCargo(context.Background(), shipSymbol).TransferCargoRequest(transferCargoRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.TransferCargo``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `TransferCargo`: TransferCargo200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.TransferCargo`: %v\n", resp)
 }
 ```
 
@@ -2102,25 +2102,25 @@ Warp Ship
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    shipSymbol := "shipSymbol_example" // string | The ship symbol.
-    navigateShipRequest := *openapiclient.NewNavigateShipRequest("WaypointSymbol_example") // NavigateShipRequest |  (optional)
+	shipSymbol := "shipSymbol_example" // string | The ship symbol.
+	navigateShipRequest := *openapiclient.NewNavigateShipRequest("WaypointSymbol_example") // NavigateShipRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FleetAPI.WarpShip(context.Background(), shipSymbol).NavigateShipRequest(navigateShipRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.WarpShip``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `WarpShip`: NavigateShip200Response
-    fmt.Fprintf(os.Stdout, "Response from `FleetAPI.WarpShip`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FleetAPI.WarpShip(context.Background(), shipSymbol).NavigateShipRequest(navigateShipRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FleetAPI.WarpShip``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `WarpShip`: NavigateShip200Response
+	fmt.Fprintf(os.Stdout, "Response from `FleetAPI.WarpShip`: %v\n", resp)
 }
 ```
 

@@ -100,10 +100,10 @@ func (o PatchShipNavRequest) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *PatchShipNavRequest) UnmarshalJSON(bytes []byte) (err error) {
+func (o *PatchShipNavRequest) UnmarshalJSON(data []byte) (err error) {
 	varPatchShipNavRequest := _PatchShipNavRequest{}
 
-	err = json.Unmarshal(bytes, &varPatchShipNavRequest)
+	err = json.Unmarshal(data, &varPatchShipNavRequest)
 
 	if err != nil {
 		return err
@@ -113,7 +113,7 @@ func (o *PatchShipNavRequest) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "flightMode")
 		o.AdditionalProperties = additionalProperties
 	}

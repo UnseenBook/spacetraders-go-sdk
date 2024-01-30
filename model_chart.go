@@ -172,10 +172,10 @@ func (o Chart) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *Chart) UnmarshalJSON(bytes []byte) (err error) {
+func (o *Chart) UnmarshalJSON(data []byte) (err error) {
 	varChart := _Chart{}
 
-	err = json.Unmarshal(bytes, &varChart)
+	err = json.Unmarshal(data, &varChart)
 
 	if err != nil {
 		return err
@@ -185,7 +185,7 @@ func (o *Chart) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "waypointSymbol")
 		delete(additionalProperties, "submittedBy")
 		delete(additionalProperties, "submittedOn")

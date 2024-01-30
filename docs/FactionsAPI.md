@@ -23,24 +23,24 @@ Get Faction
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    factionSymbol := "COSMIC" // string | The faction symbol
+	factionSymbol := "COSMIC" // string | The faction symbol
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FactionsAPI.GetFaction(context.Background(), factionSymbol).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FactionsAPI.GetFaction``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetFaction`: GetFaction200Response
-    fmt.Fprintf(os.Stdout, "Response from `FactionsAPI.GetFaction`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FactionsAPI.GetFaction(context.Background(), factionSymbol).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FactionsAPI.GetFaction``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFaction`: GetFaction200Response
+	fmt.Fprintf(os.Stdout, "Response from `FactionsAPI.GetFaction`: %v\n", resp)
 }
 ```
 
@@ -93,25 +93,25 @@ List Factions
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
-    limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
+	page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
+	limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.FactionsAPI.GetFactions(context.Background()).Page(page).Limit(limit).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `FactionsAPI.GetFactions``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetFactions`: GetFactions200Response
-    fmt.Fprintf(os.Stdout, "Response from `FactionsAPI.GetFactions`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.FactionsAPI.GetFactions(context.Background()).Page(page).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `FactionsAPI.GetFactions``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetFactions`: GetFactions200Response
+	fmt.Fprintf(os.Stdout, "Response from `FactionsAPI.GetFactions`: %v\n", resp)
 }
 ```
 

@@ -26,24 +26,24 @@ Accept Contract
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    contractId := "contractId_example" // string | The contract ID to accept.
+	contractId := "contractId_example" // string | The contract ID to accept.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ContractsAPI.AcceptContract(context.Background(), contractId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.AcceptContract``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `AcceptContract`: AcceptContract200Response
-    fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.AcceptContract`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ContractsAPI.AcceptContract(context.Background(), contractId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.AcceptContract``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `AcceptContract`: AcceptContract200Response
+	fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.AcceptContract`: %v\n", resp)
 }
 ```
 
@@ -96,25 +96,25 @@ Deliver Cargo to Contract
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    contractId := "contractId_example" // string | The ID of the contract.
-    deliverContractRequest := *openapiclient.NewDeliverContractRequest("ShipSymbol_example", "TradeSymbol_example", int32(123)) // DeliverContractRequest |  (optional)
+	contractId := "contractId_example" // string | The ID of the contract.
+	deliverContractRequest := *openapiclient.NewDeliverContractRequest("ShipSymbol_example", "TradeSymbol_example", int32(123)) // DeliverContractRequest |  (optional)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ContractsAPI.DeliverContract(context.Background(), contractId).DeliverContractRequest(deliverContractRequest).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.DeliverContract``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `DeliverContract`: DeliverContract200Response
-    fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.DeliverContract`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ContractsAPI.DeliverContract(context.Background(), contractId).DeliverContractRequest(deliverContractRequest).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.DeliverContract``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `DeliverContract`: DeliverContract200Response
+	fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.DeliverContract`: %v\n", resp)
 }
 ```
 
@@ -168,24 +168,24 @@ Fulfill Contract
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    contractId := "contractId_example" // string | The ID of the contract to fulfill.
+	contractId := "contractId_example" // string | The ID of the contract to fulfill.
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ContractsAPI.FulfillContract(context.Background(), contractId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.FulfillContract``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `FulfillContract`: FulfillContract200Response
-    fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.FulfillContract`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ContractsAPI.FulfillContract(context.Background(), contractId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.FulfillContract``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `FulfillContract`: FulfillContract200Response
+	fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.FulfillContract`: %v\n", resp)
 }
 ```
 
@@ -238,24 +238,24 @@ Get Contract
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    contractId := "contractId_example" // string | The contract ID
+	contractId := "contractId_example" // string | The contract ID
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ContractsAPI.GetContract(context.Background(), contractId).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.GetContract``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetContract`: GetContract200Response
-    fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.GetContract`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ContractsAPI.GetContract(context.Background(), contractId).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.GetContract``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetContract`: GetContract200Response
+	fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.GetContract`: %v\n", resp)
 }
 ```
 
@@ -308,25 +308,25 @@ List Contracts
 package main
 
 import (
-    "context"
-    "fmt"
-    "os"
-    openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
+	"context"
+	"fmt"
+	"os"
+	openapiclient "github.com/UnseenBook/spacetraders-go-sdk"
 )
 
 func main() {
-    page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
-    limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
+	page := int32(56) // int32 | What entry offset to request (optional) (default to 1)
+	limit := int32(56) // int32 | How many entries to return per page (optional) (default to 10)
 
-    configuration := openapiclient.NewConfiguration()
-    apiClient := openapiclient.NewAPIClient(configuration)
-    resp, r, err := apiClient.ContractsAPI.GetContracts(context.Background()).Page(page).Limit(limit).Execute()
-    if err != nil {
-        fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.GetContracts``: %v\n", err)
-        fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
-    }
-    // response from `GetContracts`: GetContracts200Response
-    fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.GetContracts`: %v\n", resp)
+	configuration := openapiclient.NewConfiguration()
+	apiClient := openapiclient.NewAPIClient(configuration)
+	resp, r, err := apiClient.ContractsAPI.GetContracts(context.Background()).Page(page).Limit(limit).Execute()
+	if err != nil {
+		fmt.Fprintf(os.Stderr, "Error when calling `ContractsAPI.GetContracts``: %v\n", err)
+		fmt.Fprintf(os.Stderr, "Full HTTP response: %v\n", r)
+	}
+	// response from `GetContracts`: GetContracts200Response
+	fmt.Fprintf(os.Stdout, "Response from `ContractsAPI.GetContracts`: %v\n", resp)
 }
 ```
 

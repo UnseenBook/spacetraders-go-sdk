@@ -171,10 +171,10 @@ func (o ShipRequirements) ToMap() (map[string]interface{}, error) {
 	return toSerialize, nil
 }
 
-func (o *ShipRequirements) UnmarshalJSON(bytes []byte) (err error) {
+func (o *ShipRequirements) UnmarshalJSON(data []byte) (err error) {
 	varShipRequirements := _ShipRequirements{}
 
-	err = json.Unmarshal(bytes, &varShipRequirements)
+	err = json.Unmarshal(data, &varShipRequirements)
 
 	if err != nil {
 		return err
@@ -184,7 +184,7 @@ func (o *ShipRequirements) UnmarshalJSON(bytes []byte) (err error) {
 
 	additionalProperties := make(map[string]interface{})
 
-	if err = json.Unmarshal(bytes, &additionalProperties); err == nil {
+	if err = json.Unmarshal(data, &additionalProperties); err == nil {
 		delete(additionalProperties, "power")
 		delete(additionalProperties, "crew")
 		delete(additionalProperties, "slots")
