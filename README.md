@@ -1,4 +1,4 @@
-# Go API client for stsdk
+# Go API client for stc
 
 SpaceTraders is an open-universe game and learning platform that offers a set of HTTP endpoints to control a fleet of ships and explore a multiplayer universe.
 
@@ -37,7 +37,7 @@ go get golang.org/x/net/context
 Put the package under your project folder and add the following in import:
 
 ```go
-import stsdk "github.com/UnseenBook/spacetraders-go-sdk"
+import stc "github.com/UnseenBook/spacetraders-go-sdk"
 ```
 
 To use a proxy, set the environment variable `HTTP_PROXY`:
@@ -52,18 +52,18 @@ Default configuration comes with `Servers` field that contains server objects as
 
 ### Select Server Configuration
 
-For using other server than the one defined on index 0 set context value `stsdk.ContextServerIndex` of type `int`.
+For using other server than the one defined on index 0 set context value `stc.ContextServerIndex` of type `int`.
 
 ```go
-ctx := context.WithValue(context.Background(), stsdk.ContextServerIndex, 1)
+ctx := context.WithValue(context.Background(), stc.ContextServerIndex, 1)
 ```
 
 ### Templated Server URL
 
-Templated server URL is formatted using default variables from configuration or from context value `stsdk.ContextServerVariables` of type `map[string]string`.
+Templated server URL is formatted using default variables from configuration or from context value `stc.ContextServerVariables` of type `map[string]string`.
 
 ```go
-ctx := context.WithValue(context.Background(), stsdk.ContextServerVariables, map[string]string{
+ctx := context.WithValue(context.Background(), stc.ContextServerVariables, map[string]string{
 	"basePath": "v2",
 })
 ```
@@ -74,13 +74,13 @@ Note, enum values are always validated and all unused variables are silently ign
 
 Each operation can use different server URL defined using `OperationServers` map in the `Configuration`.
 An operation is uniquely identified by `"{classname}Service.{nickname}"` string.
-Similar rules for overriding default operation server index and variables applies by using `stsdk.ContextOperationServerIndices` and `stsdk.ContextOperationServerVariables` context maps.
+Similar rules for overriding default operation server index and variables applies by using `stc.ContextOperationServerIndices` and `stc.ContextOperationServerVariables` context maps.
 
 ```go
-ctx := context.WithValue(context.Background(), stsdk.ContextOperationServerIndices, map[string]int{
+ctx := context.WithValue(context.Background(), stc.ContextOperationServerIndices, map[string]int{
 	"{classname}Service.{nickname}": 2,
 })
-ctx = context.WithValue(context.Background(), stsdk.ContextOperationServerVariables, map[string]map[string]string{
+ctx = context.WithValue(context.Background(), stc.ContextOperationServerVariables, map[string]map[string]string{
 	"{classname}Service.{nickname}": {
 		"port": "8443",
 	},
@@ -328,7 +328,7 @@ Authentication schemes defined for the API:
 Example
 
 ```go
-auth := context.WithValue(context.Background(), stsdk.ContextAccessToken, "BEARER_TOKEN_STRING")
+auth := context.WithValue(context.Background(), stc.ContextAccessToken, "BEARER_TOKEN_STRING")
 r, err := client.Service.Operation(auth, args)
 ```
 

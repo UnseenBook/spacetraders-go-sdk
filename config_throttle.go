@@ -1,4 +1,4 @@
-package stsdk
+package stc
 
 import (
 	"golang.org/x/time/rate"
